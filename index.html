@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filter</title>	
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+	
+	
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="top-line">
+			<span>Выберите друзей</span>
+		</div>
+		<div class="content clearfix">
+			<div class="content-right">
+				<div class="search-box">
+					<input type="text" class="search-line" id="search1" placeholder="Начните вводить имя друга">
+				</div>
+				<div class="list-name"><div>Ваши друзья</div></div>
+				<div class="list-wrapper" id= "listwrapper">						
+					<ul class="friends-list" id="friends-list1">
+						<script type="text/x-handlebars-template" id="ItemTemplate">
+							{{#each list}}
+							<li class="list-item" data-id = '{{./user_id}}' draggable='true'><div class="friend-photo"><img src="{{./photo_50}}"></div><div class="friend-name"> {{./first_name}} {{./last_name}} </div><a href="#" class="list-item-icon"></a></li>
+							{{/each}}
+						</script>
+					</ul>					
+				</div>	
+			</div>
+			<div class="content-left">
+				<div class="search-box">
+					<input type="text" class="search-line" id="search2" placeholder="Название">
+				</div>
+				<div class="list-name"><div>Друзья в списке</div></div>
+				<div class="list-wrapper" id="listwrapper">
+					<ul class="friends-list .second-list" id="friends-list2">
+						<script type="text/x-handlebars-template" id="ItemTemplate2">
+							{{#each list}}
+							<li class="list-item" data-id = '{{./user_id}}' draggable='true'><div class="friend-photo"><img src="{{./photo_50}}"></div><div class="friend-name"> {{./first_name}} {{./last_name}} </div><a href="#" class="list-item-icon del"></a></li>
+							{{/each}}
+						</script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-line">
+			<button class="save" id="save">Сохранить</button>
+		</div>
+	</div>	
+	<script type="text/javascript" src="ode.js"></script>
+</body>
+</html>
+
+

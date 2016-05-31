@@ -1,0 +1,161 @@
+
+li{
+	list-style: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+.clearfix:after, .clearfix:before {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.wrapper{
+	width: 620px;
+	height: 490px;
+	border-radius: 8px;
+	
+}
+
+.top-line{
+	height: 45px;
+	background: #ff8663;
+	padding-left: 15px;
+	border-radius: 10px 10px 0 0;
+}
+.top-line  span{
+
+	margin-left: 15px;
+	line-height: 45px;
+	color: #ffffff;
+	font-size: 16px;
+	
+}
+.search-box{
+	background: #f0f0f0;
+	height: 45px;
+
+}
+.search-line{
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 258px;
+	border-radius: 50px 50px 50px 50px;
+	border: none;
+	height: 26px;
+	font-size: 12px;
+	padding-left: 27px;
+	background-image: url(sr.png);
+	background-repeat: no-repeat;
+	background-position: 7px center;
+
+}
+.list-name{
+	height: 31px;
+	font-size: 12px;
+}
+.list-name div{
+	padding-top: 10px;
+	margin-left: 15px;
+	color: #4f4f4f;
+}
+
+.friends-list{
+	border-top: 1px solid #f0f0f0;
+	margin-left: 15px;
+	width: 275px;
+}
+.content-right{
+	float: left;
+	width: 309px;
+	border-right: 1px solid #f0f0f0;
+}
+.content-left{
+	float: left;
+	width: 309px;
+}
+.list-wrapper{
+	
+	height: 320px;
+	
+	overflow: auto;
+	    margin-right: 5px;
+	
+}
+
+.bottom-line{
+	height: 45px;
+	background: #f0f0f0;
+	position: relative;
+	border-radius: 0 0 10px 10px;
+}
+
+.list-item{
+	height: 59px;
+	position: relative;
+	border-bottom: 1px solid #f0f0f0;
+	margin-right: 5px;
+}
+.list-item:hover{
+	background: #f0f0f0
+}
+.list-item-icon{
+	position: absolute;
+    background-image: url(Rounded-Rectangle-5.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 16px;
+    height: 18px;
+    right: 0;
+    top: 50%;
+    margin-top: -7.5px;
+
+}
+.list-item-icon.del{
+	background-image: url(del.png);
+}
+
+.friend-photo{
+    float: left;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;    
+    width: 50;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+
+}
+.friend-name{
+	float: left;
+	line-height: 54px;
+	margin-left: 7px;
+	font-size: 15px;
+	color: #4f4f4f;
+}
+
+.save{
+	width: 87px;
+	height: 30px;
+	border: none;
+	background: #ff8663;
+	position: absolute;
+	right: 0;
+	margin-right: 7px;
+	top: 50%;
+    margin-top: -15px;
+    color: 	#fff;
+    border-radius: 80px 80px 80px 80px;
+}
+.save:hover{
+	background: #fff;
+	color: black;
+}

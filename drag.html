@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="drag.css">
+</head>
+<body id="body">
+
+
+	<div id = "wrapper">
+		<div id="el" draggable="true"></div>
+
+
+		<div id="dropTarget"></div>
+	</div>
+</body>
+
+
+
+
+
+
+<script type="text/javascript">
+	
+wrapper.addEventListener("dragstart", function(e){
+ 	console.log("start");
+	var elem = e.target;
+	
+	wrapper.addEventListener("dragenter", function(){
+		console.log("enter");
+		//elem.parentNode.removeChild(elem);
+	})
+ 	
+	wrapper.addEventListener("dragend", function(){
+	console.log("end");
+
+elem.parentNode.removeChild(elem);
+	dropTarget.appendChild(elem);
+	//return false;
+	})
+
+})
+
+
+
+
+
+
+
+
+
+
+function dragDrop(ev) {
+   var data = ev.dataTransfer.getData("Text");
+   ev.target.appendChild(document.getElementById(data));
+   ev.stopPropagation();
+   return false;
+}
+
+function dragEnter(ev) {
+   event.preventDefault();
+   return true;
+}
+function dragOver(ev) {
+    event.preventDefault();
+}
+
+function dragStart(ev) {
+   ev.dataTransfer.effectAllowed='move';
+   ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));   
+   ev.dataTransfer.setDragImage(ev.target,100,100);
+   return true;
+}
+	
+
+
+
+</script>
+</body>
+</html>
